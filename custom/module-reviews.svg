@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>module-perf-review</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="module-perf-review" stroke="#000000" stroke-width="2">
+            <g transform="translate(4.000000, 2.000000)">
+                <path d="M10,0 L2,0 C0.8954305,0 0,0.8954305 0,2 L0,18 C0,19.1045695 0.8954305,20 2,20 L14,20 C15.1045695,20 16,19.1045695 16,18 L16,6 L10,0 Z" id="Shape"></path>
+                <polyline id="Shape" points="10 0 10 6 16 6"></polyline>
+                <path d="M12,11 L4,11" id="Shape"></path>
+                <path d="M12,15 L4,15" id="Shape"></path>
+                <path d="M4.29317671,5.29317671 C4.68307923,4.90227443 5.31592102,4.90227443 5.70682329,5.29317671 C6.09772557,5.68407898 6.09772557,6.31592102 5.70682329,6.70682329 C5.31592102,7.09772557 4.68307923,7.09772557 4.29317671,6.70682329 C3.90227443,6.31592102 3.90227443,5.68407898 4.29317671,5.29317671 Z" id="Stroke-7"></path>
+            </g>
+        </g>
+    </g>
+</svg>

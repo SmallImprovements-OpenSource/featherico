@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>module-objectives</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="module-objectives">
+            <g transform="translate(2.000000, 2.000000)">
+                <path d="M17.071,2.9287 C19.024,4.8817 20,7.4407 20,9.9997 C20,12.5587 19.024,15.1187 17.071,17.0717 C15.118,19.0237 12.559,19.9997 10,19.9997 C7.441,19.9997 4.882,19.0237 2.929,17.0717 C0.976,15.1187 0,12.5587 0,9.9997 C0,7.4407 0.976,4.8817 2.929,2.9287 C4.882,0.9757 7.441,-0.0003 10,-0.0003 C11.241,-0.0003 12.482,0.2297 13.654,0.6887" id="Stroke-1" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M13.8893,6.1108 C14.9633,7.1848 15.5003,8.5918 15.5003,9.9998 C15.5003,11.4078 14.9633,12.8148 13.8893,13.8888 C12.8153,14.9628 11.4073,15.4998 10.0003,15.4998 C8.5923,15.4998 7.1843,14.9628 6.1113,13.8888 C5.0363,12.8148 4.5003,11.4078 4.5003,9.9998 C4.5003,8.5918 5.0363,7.1848 6.1113,6.1108 C7.1843,5.0368 8.5923,4.4998 10.0003,4.4998" id="Stroke-3" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M9.2931,9.293 C9.6831,8.902 10.3161,8.902 10.7071,9.293 C11.0981,9.684 11.0981,10.316 10.7071,10.707 C10.3161,11.098 9.6831,11.098 9.2931,10.707 C8.9021,10.316 8.9021,9.684 9.2931,9.293" id="Fill-5" fill="#FFFFFF"></path>
+                <path d="M9.2931,9.293 C9.6831,8.902 10.3161,8.902 10.7071,9.293 C11.0981,9.684 11.0981,10.316 10.7071,10.707 C10.3161,11.098 9.6831,11.098 9.2931,10.707 C8.9021,10.316 8.9021,9.684 9.2931,9.293 Z" id="Stroke-7" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M10.0002,10 L20,0" id="Stroke-9" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>
