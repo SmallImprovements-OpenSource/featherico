@@ -13,7 +13,9 @@ const {
 } = require('lodash/fp');
 const path = require('path');
 const fs = require('fs');
+const { promisify } = require('util');
 const { transform } = require('babel-core');
+const writeFile = promisify(fs.writeFile);
 const getCustomIcons = require('./customIcons');
 const whitelist = require('./whitelist');
 const aliased = require('./aliased');
@@ -57,17 +59,16 @@ function getAliased() {
 }
 
 function write(icons) {
-    writeIndex(icons);
-    forEach(writeFile)(icons);
+    return Promise.all([writeIndex(icons), ...map(writeIcon, icons)]);
 }
 
 function writeIndex(icons) {
     const imports = map(([name]) => `export ${name} from './${name}';`)(icons);
     const { code } = transform([...imports, '\n'].join('\n'), { plugins: ['transform-export-extensions'] });
-    fs.writeFileSync(path.resolve(outputPath, 'index.js'), code);
+    return writeFile(path.resolve(outputPath, 'index.js'), code);
 }
 
-function writeFile([name, icon]) {
+function writeIcon([name, icon]) {
     const { code } = transform(icon, { presets: ['react'] });
-    fs.writeFileSync(path.resolve(outputPath, name + '.js'), code);
+    return writeFile(path.resolve(outputPath, name + '.js'), code);
 }
