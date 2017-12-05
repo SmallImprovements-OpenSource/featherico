@@ -26,7 +26,10 @@ const outputPath = path.resolve(__dirname, 'dist');
 
 getIcons()
     .then(write)
-    .catch(error => console.error(error));
+    .catch(error => {
+        console.error(error);
+        process.exit(1);
+    });
 
 async function getIcons() {
     const customIcons = await getCustomIcons();
