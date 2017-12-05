@@ -5,6 +5,7 @@ const fs = require('fs');
 const { transform } = require('babel-core');
 const getCustomIcons = require('./customIcons');
 const whitelist = require('./whitelist');
+const aliased = require('./aliased');
 
 const pascalCase = compose(upperFirst, camelCase);
 const filterWhitelisted = compose(fromPairs, filter(([name]) => includes(name, whitelist)), toPairs);
@@ -20,7 +21,7 @@ async function getIcons() {
         map(([name, icon]) => [name, template(name, icon)]),
         map(([name, icon]) => [pascalCase('icon-' + name), icon]),
         toPairs
-    )({ ...filterWhitelisted(feather.icons), ...customIcons });
+    )({ ...filterWhitelisted(feather.icons), ...getAliased(), ...customIcons });
 }
 
 function template(name, icon) {
@@ -35,6 +36,12 @@ export default function ${name}(props) {
     );
 }
 `;
+}
+
+function getAliased() {
+    return compose(fromPairs, map(([originalName, newName]) => [newName, feather.icons[originalName]]), toPairs)(
+        aliased
+    );
 }
 
 function write(icons) {
