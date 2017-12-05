@@ -1,11 +1,24 @@
 const feather = require('feather-icons');
-const { compose, toPairs, map, forEach, camelCase, upperFirst, filter, includes } = require('lodash/fp');
+const {
+    compose,
+    contains,
+    toPairs,
+    fromPairs,
+    map,
+    forEach,
+    camelCase,
+    upperFirst,
+    filter,
+    includes,
+} = require('lodash/fp');
 const path = require('path');
 const fs = require('fs');
 const { transform } = require('babel-core');
 const getCustomIcons = require('./customIcons');
+const whitelist = require('./whitelist');
 
 const pascalCase = compose(upperFirst, camelCase);
+const filterWhitelisted = compose(fromPairs, filter(([name]) => contains(name, whitelist)), toPairs);
 const outputPath = path.resolve(__dirname, 'dist');
 
 getIcons()
@@ -18,7 +31,7 @@ async function getIcons() {
         map(([name, icon]) => [name, template(name, icon)]),
         map(([name, icon]) => [pascalCase('icon-' + name), icon]),
         toPairs
-    )({ ...feather.icons, ...customIcons });
+    )({ ...filterWhitelisted(feather.icons), ...customIcons });
 }
 
 function template(name, icon) {
