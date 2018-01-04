@@ -1,11 +1,12 @@
 language: node_js
 node_js:
-- 9
+  - 9
 script:
-- npm run build-icons
-- npm run build-example
-notifications:
-  email: false
+  - npm run build-icons
+  - npm run build-example
+after_success:
+  - npm install -g travis-deploy-once@4
+  - travis-deploy-once "npm run semantic-release"
 deploy:
   provider: gcs
   access_key_id: GOOGBLIFJU7PL65JN2NM
@@ -18,6 +19,17 @@ deploy:
   on:
     repo: SmallImprovements-OpenSource/featherico
 after_deploy: node publishExample
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
+script:
+  - npm run build-icons
+  - npm run build-example
+cache:
+  directories:
+    - ~/.npm
+notifications:
+  email: false
 env:
   global:
     secure: gizijj3F06qb+oy947k5VOKAQPY6ThTYmphvthAbyRrucK+xk5b2EhIZGVHxTwuBzRd4XTKUToCR/yNSlOb1N8g9jrF1DfuFElV2tXVw2DU8B59SSUUNb/3piuFEVYEjJE6f12nGNujGKPrVMKuNHtOuWPl7YDzETlsi7IuK72rC7rFnBnacICDBfMfGdD6zGfKj+G1qRKwLoNKG0V/ygn7RQ+QlQC5A0Tj7YwnKDocGmedFWuRj9eGyR6pyNotXkDSbKvQVj8a/6x5d5jnaTTjYXypukUKGf13ZSRFr3GSoT/nm0hvgmab/K5UtvawlKBaB3iJRfepUJpt21Fbp7YbM6nkPK6nY0k8msqnw39iCSiR9oOQ7Wv4d0E0G+Mcg7J73+eI8gKodfCzXt73lv3tolCgzIOOCew5p66nwUb6hR+22UknZN5RWnm149o47VXrAiuuS2KXrXxiU+jAGwRiuV0q0DUh1o1zYv/6HfmI6VTBCc0rP5fqhtZ7iPmMevH7OIjidsb6pZnrOCJVEbHjoDu+8cc4xpt+pq3Ap6YW7TM3dMM5UbMEKqXc5luFXGsjragrMDNlB2kBXk8wWnQ4iaAtXRt/IXYiqiH6HcSn81lFAq88WWQXcCa7KjFNlYsvnpWUnWLaOvjx7yHZWjOmVS8ZGifbf1D0pHs/iJyo=
