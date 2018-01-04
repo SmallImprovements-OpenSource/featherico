@@ -8,7 +8,8 @@
     "license": "MIT",
     "repository": "SmallImprovements-OpenSource/featherico",
     "scripts": {
-        "prepare": "rimraf dist && mkdirp dist && node buildIcons",
+        "prepare": "npm run prepare",
+        "build-icons": "rimraf dist && mkdirp dist && node buildIcons",
         "build-example": "rimraf example && mkdirp example && babel-node --presets react,env buildExample"
     },
     "peerDependencies": {
