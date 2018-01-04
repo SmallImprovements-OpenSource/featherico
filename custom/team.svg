@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>team</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="team" stroke="#000000" stroke-width="2">
+            <g transform="translate(1.000000, 5.000000)">
+                <path d="M11,0 C12.381,0 13.5,1.119 13.5,2.5 C13.5,3.881 12.381,5 11,5 C9.619,5 8.5,3.881 8.5,2.5 C8.5,1.119 9.619,0 11,0 Z" id="Stroke-24"></path>
+                <path d="M16.5,14 L16.5,12 C16.5,10.343 15.157,9 13.5,9 L8.5,9 C6.843,9 5.5,10.343 5.5,12 L5.5,14" id="Stroke-26"></path>
+                <path d="M5,6 L2,6 C0.896,6 0,6.896 0,8 L0,11" id="Stroke-28"></path>
+                <path d="M18,0 C18.552,0 19,0.448 19,1 C19,1.552 18.552,2 18,2 C17.448,2 17,1.552 17,1 C17,0.448 17.448,0 18,0 Z" id="Stroke-30"></path>
+                <path d="M22,11 L22,8 C22,6.896 21.104,6 20,6 L17,6" id="Stroke-32"></path>
+                <path d="M4,0 C4.552,0 5,0.448 5,1 C5,1.552 4.552,2 4,2 C3.448,2 3,1.552 3,1 C3,0.448 3.448,0 4,0 Z" id="Stroke-34"></path>
+            </g>
+        </g>
+    </g>
+</svg>

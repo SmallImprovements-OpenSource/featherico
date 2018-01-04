@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>rss</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="rss" stroke="#000000" stroke-width="2">
+            <g transform="translate(4.000000, 4.000000)">
+                <path d="M16,15 C16,6.71572875 9.28427125,0 1,0" id="Oval-3" stroke-linejoin="round"></path>
+                <path d="M11,15 C11,9.4771525 6.5228475,5 1,5" id="Oval-3-Copy" stroke-linejoin="round"></path>
+                <path d="M6,15 C6,12.2385763 3.76142375,10 1,10" id="Oval-3-Copy-2" stroke-linejoin="round"></path>
+                <path d="M1,15 L1,15" id="Path-2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

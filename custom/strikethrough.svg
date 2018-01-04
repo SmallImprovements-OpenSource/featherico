@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>strikethrough</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="strikethrough" stroke="#161B1E" stroke-width="2">
+            <g transform="translate(4.000000, 3.000000)">
+                <path d="M13,2.86111111 C12.5,1.91666667 10.738829,0.5 8,0.5 C5.26117099,0.5 3,1.91666667 3,4.27777778 C3,6.16666667 4,7.58333333 8,8.52777778 C8.63831357,8.6784907 9.21296398,8.84122889 9.72801493,9.01791132 M13.4799522,12.7929588 C13.4934144,12.941251 13.5,13.0935522 13.5,13.25 C13.5,15.6111111 11.5,17.5 8,17.5 C5,17.5 3.29998779,16.0833333 2.5,15.1388889" id="Path-3-Copy-3"></path>
+                <path d="M0,9 L16,9" id="Shape-Copy-9" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

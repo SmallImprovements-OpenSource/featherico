@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>magic-wand</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="magic-wand" stroke="#000000" stroke-width="2">
+            <g transform="translate(0.000000, 1.000000)" id="Shape">
+                <path d="M15,0 L15,3"></path>
+                <path d="M15,13 L15,16"></path>
+                <path d="M7,8 L10,8"></path>
+                <path d="M20,8 L23,8"></path>
+                <path d="M19.5961941,1.90380592 L19.5961941,4.90380592" transform="translate(19.596194, 3.403806) rotate(45.000000) translate(-19.596194, -3.403806) "></path>
+                <path d="M8.90380592,3.40380592 L11.9038059,3.40380592" transform="translate(10.403806, 3.403806) rotate(45.000000) translate(-10.403806, -3.403806) "></path>
+                <path d="M18.0961941,12.5961941 L21.0961941,12.5961941" transform="translate(19.596194, 12.596194) rotate(45.000000) translate(-19.596194, -12.596194) "></path>
+                <path d="M8.79289322,5.1862915 L8.79289322,23.5710678" transform="translate(8.500000, 14.085786) rotate(45.000000) translate(-8.500000, -14.085786) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
