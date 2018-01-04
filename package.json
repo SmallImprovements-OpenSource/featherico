@@ -3,7 +3,12 @@
     "version": "0.0.1",
     "main": "dist/index.js",
     "description": "Icon set for Small Improvements. Based on feather, exported as React components.",
-    "keywords": ["icons", "feather", "small improvements", "react"],
+    "keywords": [
+        "icons",
+        "feather",
+        "small improvements",
+        "react"
+    ],
     "author": "Kolja Lange",
     "license": "MIT",
     "repository": "SmallImprovements-OpenSource/featherico",
@@ -15,6 +20,7 @@
         "react": "^15.0.0 || ^16.0.0"
     },
     "devDependencies": {
+        "axios": "^0.17.1",
         "babel-cli": "^6.26.0",
         "babel-core": "^6.26.0",
         "babel-plugin-transform-export-extensions": "^6.22.0",
