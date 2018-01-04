@@ -1,6 +1,6 @@
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { writeFileSync } from 'fs';
+import { writeFileSync, readFileSync } from 'fs';
 import { map, toPairs } from 'lodash/fp';
 import path from 'path';
 import * as icons from './dist';
@@ -28,21 +28,13 @@ function IconList() {
 function IconWrapper({ children, name }) {
     return (
         <div className="iconWrapper">
-            {children}
-            {name}
+            {children} {name}
         </div>
     );
 }
 
 function getHtml(content) {
-    return `<!doctype html>
-<html lang=en>
-<head>
-<meta charset=utf-8>
-<title>Featherico</title>
-</head>
-<body>
-    ${content}
-</body>
-</html>`;
+    return readFileSync(path.resolve(__dirname, 'exampleTemplate.html'))
+        .toString()
+        .replace('{{CONTENT}}', content);
 }
