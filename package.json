@@ -8,21 +8,25 @@
     "license": "MIT",
     "repository": "SmallImprovements-OpenSource/featherico",
     "scripts": {
-        "prepare": "rimraf dist && mkdirp dist && node buildIcons"
+        "prepare": "rimraf dist && mkdirp dist && node buildIcons",
+        "build-example": "rimraf example && mkdirp example && babel-node --presets react,env buildExample"
     },
     "peerDependencies": {
         "react": "^15.0.0 || ^16.0.0"
     },
     "devDependencies": {
+        "babel-cli": "^6.26.0",
         "babel-core": "^6.26.0",
         "babel-plugin-transform-export-extensions": "^6.22.0",
+        "babel-preset-env": "^1.6.1",
         "babel-preset-react": "^6.24.1",
         "cheerio": "^1.0.0-rc.2",
         "feather-icons": "^3.3.0",
         "glob": "^7.1.2",
         "lodash": "^4.17.4",
         "mkdirp": "^0.5.1",
-        "react": "^16.1.1",
+        "react": "^16.2.0",
+        "react-dom": "^16.2.0",
         "rimraf": "^2.6.2",
         "svgo": "^1.0.3"
     }
