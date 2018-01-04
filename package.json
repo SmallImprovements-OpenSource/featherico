@@ -8,7 +8,7 @@
     "license": "MIT",
     "repository": "SmallImprovements-OpenSource/featherico",
     "scripts": {
-        "prepare": "rimraf dist && mkdirp dist && node index"
+        "prepare": "rimraf dist && mkdirp dist && node buildIcons"
     },
     "peerDependencies": {
         "react": "^15.0.0 || ^16.0.0"
