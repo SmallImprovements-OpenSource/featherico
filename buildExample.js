@@ -5,7 +5,10 @@ import { map, toPairs } from 'lodash/fp';
 import path from 'path';
 import * as icons from './dist';
 
-writeFileSync(path.resolve(__dirname, 'example', 'index.html'), getHtml(renderToStaticMarkup(<IconList />)));
+writeFileSync(
+    path.resolve(__dirname, 'example', (process.env.TRAVIS_COMMIT || 'index') + '.html'),
+    getHtml(renderToStaticMarkup(<IconList />))
+);
 
 function IconList() {
     return (
