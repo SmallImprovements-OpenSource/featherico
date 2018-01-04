@@ -4,4 +4,5 @@ export default {
     height: '1.2em',
     marginTop: '-.1em',
     marginBottom: '-.25em',
+    strokeWidth: 'var(--fi-stroke, 2px)',
 };
