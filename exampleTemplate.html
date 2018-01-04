@@ -10,6 +10,7 @@
             "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
             "Fira Sans", "Droid Sans", "Helvetica Neue";
             font-size: 15px;
+            font-weight: 500;
             color: #424649;
             background-color: #FAFAFA;
         }
@@ -29,7 +30,47 @@
 </head>
 
 <body>
-    {{CONTENT}}
+    <div>
+        <input type="range" max="2" id="strokeSelector">
+        <input type="range" max="4" id="sizeSelector" value="1">
+    </div>
+    <div id="content">
+        {{CONTENT}}
+    </div>
+
+    <script>
+        const strokes = {
+            properties: ['--fi-stroke', 'font-weight'],
+            values: [
+                ['1.5px', 400],
+                ['2px', 500],
+                ['2.2px', 600],
+            ]
+        };
+
+        const sizes = {
+            properties: ['font-size'],
+            values: [
+                ['13px'],
+                ['15px'],
+                ['18px'],
+                ['22px'],
+                ['26px'],
+            ],
+        }
+
+        const content = document.getElementById('content');
+
+        function changeHandler(data, event) {
+            data.properties.forEach((property, index) => {
+                const value = data.values[event.target.valueAsNumber][index];
+                content.style.setProperty(property, value);
+            });
+        }
+
+        document.getElementById('strokeSelector').addEventListener('change', changeHandler.bind(null, strokes));
+        document.getElementById('sizeSelector').addEventListener('change', changeHandler.bind(null, sizes));
+    </script>
 </body>
 
 </html>
