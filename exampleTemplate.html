@@ -13,6 +13,23 @@
             font-weight: 500;
             color: #424649;
             background-color: #FAFAFA;
+            padding: 20px;
+        }
+
+        .sliders {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .slider {
+            padding: 10px;
+        }
+
+        .slider label {
+            display: block;
+            font-style: italic;
+            text-align: center;
         }
 
         .iconList {
@@ -30,9 +47,15 @@
 </head>
 
 <body>
-    <div>
-        <input type="range" max="2" id="strokeSelector">
-        <input type="range" max="4" id="sizeSelector" value="1">
+    <div class="sliders">
+        <div class="slider">
+            <input type="range" max="2" id="strokeSelector">
+            <label for="strokeSelector">Weight</label>
+        </div>
+        <div class="slider">
+            <input type="range" max="4" id="sizeSelector" value="1">
+            <label for="sizeSelector">Size</label>
+        </div>
     </div>
     <div id="content">
         {{CONTENT}}
