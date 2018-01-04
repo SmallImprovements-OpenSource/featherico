@@ -1,7 +1,7 @@
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { writeFileSync, readFileSync } from 'fs';
-import { map, toPairs } from 'lodash/fp';
+import { map, toPairs, sortBy } from 'lodash/fp';
 import path from 'path';
 import * as icons from './dist';
 
@@ -19,7 +19,7 @@ function IconList() {
                         <Icon className="icon" />
                     </IconWrapper>
                 ),
-                toPairs(icons)
+                sortBy(([name]) => name, toPairs(icons))
             )}
         </div>
     );
