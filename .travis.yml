@@ -18,6 +18,7 @@ deploy:
   acl: public-read
   on:
     repo: SmallImprovements-OpenSource/featherico
+    all_branches: true
 after_deploy: node publishExample
 branches:
   except:
