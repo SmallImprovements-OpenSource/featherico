@@ -1,4 +1,4 @@
-export default {
+module.exports = {
     display: 'inline-block',
     position: 'relative',
     verticalAlign: 'top',
