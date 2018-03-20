@@ -23,6 +23,7 @@ const aliased = require('./aliased');
 const pascalCase = compose(upperFirst, camelCase);
 const filterWhitelisted = compose(fromPairs, filter(([name]) => includes(name, whitelist)), toPairs);
 const outputPath = path.resolve(__dirname, 'dist');
+const outputPathEs5 = path.resolve(__dirname, 'dist-es5');
 
 getIcons()
     .then(write)
@@ -66,12 +67,22 @@ function write(icons) {
 }
 
 function writeIndex(icons) {
+    const fileName = 'index.js';
     const imports = map(([name]) => `export ${name} from './${name}';`)(icons);
     const { code } = transform([...imports, '\n'].join('\n'), { plugins: ['transform-export-extensions'] });
-    return writeFile(path.resolve(outputPath, 'index.js'), code);
+    const { code: codeEs5 } = transform(code, { plugins: ['transform-es2015-modules-commonjs'] });
+    return Promise.all([
+        writeFile(path.resolve(outputPath, fileName), code),
+        writeFile(path.resolve(outputPathEs5, fileName), codeEs5),
+    ]);
 }
 
 function writeIcon([name, icon]) {
+    const fileName = name + '.js';
     const { code } = transform(icon, { presets: ['react'] });
-    return writeFile(path.resolve(outputPath, name + '.js'), code);
+    const { code: codeEs5 } = transform(code, { plugins: ['transform-es2015-modules-commonjs'] });
+    return Promise.all([
+        writeFile(path.resolve(outputPath, fileName), code),
+        writeFile(path.resolve(outputPathEs5, fileName), codeEs5),
+    ]);
 }

@@ -1,7 +1,8 @@
 {
     "name": "featherico",
     "version": "0.0.0-development",
-    "main": "dist/index.js",
+    "main": "dist-es5/index.js",
+    "module": "dist/index.js",
     "description": "Icon set for Small Improvements. Based on feather, exported as React components.",
     "keywords": [
         "icons",
@@ -13,7 +14,7 @@
     "license": "MIT",
     "repository": "SmallImprovements-OpenSource/featherico",
     "scripts": {
-        "build-icons": "rimraf dist && mkdirp dist && node buildIcons",
+        "build-icons": "rimraf dist dist-es5 && mkdirp dist dist-es5 && node buildIcons",
         "build-example": "rimraf example && mkdirp example && babel-node --presets react,env buildExample",
         "semantic-release": "semantic-release"
     },
@@ -24,6 +25,7 @@
         "axios": "^0.17.1",
         "babel-cli": "^6.26.0",
         "babel-core": "^6.26.0",
+        "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
         "babel-plugin-transform-export-extensions": "^6.22.0",
         "babel-preset-env": "^1.6.1",
         "babel-preset-react": "^6.24.1",
@@ -35,7 +37,7 @@
         "react": "^16.2.0",
         "react-dom": "^16.2.0",
         "rimraf": "^2.6.2",
-        "svgo": "^1.0.3",
-        "semantic-release": "^11.0.2"
+        "semantic-release": "^11.0.2",
+        "svgo": "^1.0.3"
     }
 }
