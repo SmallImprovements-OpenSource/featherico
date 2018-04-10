@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>question-scales</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="question-scales" stroke="#000000" stroke-width="2">
+            <g transform="translate(3.000000, 2.000000)">
+                <circle id="Oval" cx="2" cy="10" r="2"></circle>
+                <circle id="Oval" fill="#000000" cx="2" cy="2" r="2"></circle>
+                <circle id="Oval" cx="2" cy="18" r="2"></circle>
+                <path d="M18,9.82842712 L12,15.8284271 L7,16.8284271 L8,11.8284271 L14,5.82842712 L14,5.82842712 C15.1045695,4.72385763 16.8954305,4.72385763 18,5.82842712 L18,5.82842712 L18,5.82842712 C19.1045695,6.93299662 19.1045695,8.72385763 18,9.82842712 Z" id="Shape-Copy-25" transform="translate(12.914214, 10.914214) scale(1, -1) translate(-12.914214, -10.914214) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
