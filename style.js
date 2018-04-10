@@ -1,9 +1,9 @@
 module.exports = {
     display: 'inline-block',
     position: 'relative',
-    verticalAlign: 'top',
+    verticalAlign: 'middle',
     overflow: 'visible',
-    top: 'calc(50% - (var(--fi-size, 1.1em) / 2))',
+    marginTop: 'calc(var(--fi-size, 1.1em) / -5)',
     height: '1em',
     width: 'var(--fi-size, 1.1em)',
     strokeWidth: 'var(--fi-stroke, 2px)',
