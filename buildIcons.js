@@ -64,16 +64,18 @@ export default function ${name}(props) {
 function badgeTemplate(name, icon) {
     return `import React from 'react';
 
+var style = { verticalAlign: 'middle' };
+
 export default function ${name}(props) {
     if (props.small) {
         return (
-            <svg width="14" height="14" className={props.className}>
+            <svg width="14" height="14" className={props.className} style={style}>
                 ${icon.small}
             </svg>
         );
     } else {
         return (
-            <svg width="20" height="20" className={props.className}>
+            <svg width="20" height="20" className={props.className} style={style}>
                 ${icon.large}
             </svg>
         );
