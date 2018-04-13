@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>iconbadge-inprogress-large</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iconbadge-inprogress-large">
+            <circle id="Oval" fill="#FCAC53" cx="10" cy="10" r="10"></circle>
+            <path d="M8.2773501,5.58397485 L14.2773501,9.58397485 C14.5742166,9.78188588 14.5742166,10.2181141 14.2773501,10.4160251 L8.2773501,14.4160251 C7.94507273,14.6375434 7.5,14.3993477 7.5,14 L7.5,6 C7.5,5.60065231 7.94507273,5.36245661 8.2773501,5.58397485 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

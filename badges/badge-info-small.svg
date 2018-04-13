@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>iconbadge-info-small</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iconbadge-info-small">
+            <g id="x-circle" fill="#C9E5FF">
+                <circle id="Oval" cx="7" cy="7" r="7"></circle>
+            </g>
+            <g id="info" transform="translate(4.600000, 1.800000)" fill="#4495D8" fill-rule="nonzero">
+                <path d="M1.49,5.38564954 C1.088662,5.29084661 0.79,4.93030143 0.79,4.5 C0.79,3.99742088 1.19742088,3.59 1.7,3.59 L2.4,3.59 C2.90257912,3.59 3.31,3.99742088 3.31,4.5 L3.31,7.09 L3.45,7.09 C3.95257912,7.09 4.36,7.49742088 4.36,8 C4.36,8.50257912 3.95257912,8.91 3.45,8.91 L1.35,8.91 C0.847420878,8.91 0.44,8.50257912 0.44,8 C0.44,7.49742088 0.847420878,7.09 1.35,7.09 L1.49,7.09 L1.49,5.38564954 Z M2.4,2.68 C1.85876095,2.68 1.42,2.24123905 1.42,1.7 C1.42,1.15876095 1.85876095,0.72 2.4,0.72 C2.94123905,0.72 3.38,1.15876095 3.38,1.7 C3.38,2.24123905 2.94123905,2.68 2.4,2.68 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

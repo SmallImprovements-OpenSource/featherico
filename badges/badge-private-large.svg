@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>iconbadge-private-large</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iconbadge-private-large">
+            <g id="play-circle" fill="#8A8E91">
+                <circle id="Oval" cx="10" cy="10" r="10"></circle>
+            </g>
+            <g id="Icons/500-medium/user" transform="translate(5.000000, 4.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                <g id="user" transform="translate(0.000000, 0.500000)">
+                    <path d="M9.5,10 C9.5,10.2761424 9.27614237,10.5 9,10.5 L1,10.5 C0.723857625,10.5 0.5,10.2761424 0.5,10 L0.5,9 C0.5,7.61928813 1.61928813,6.5 3,6.5 L7,6.5 C8.38071187,6.5 9.5,7.61928813 9.5,9 L9.5,10 Z" id="Shape"></path>
+                    <path d="M5,5.5 C3.61928813,5.5 2.5,4.38071187 2.5,3 C2.5,1.61928813 3.61928813,0.5 5,0.5 C6.38071187,0.5 7.5,1.61928813 7.5,3 C7.5,4.38071187 6.38071187,5.5 5,5.5 Z" id="Oval"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

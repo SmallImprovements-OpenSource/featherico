@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>iconbadge-fail_decline-small</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iconbadge-fail_decline-small">
+            <g id="x-circle">
+                <circle id="Oval" fill="#FF333A" cx="7" cy="7" r="7"></circle>
+                <path d="M8.28693434,7 L9.74346717,8.45653283 C10.0988443,8.81190993 10.0988443,9.38809007 9.74346717,9.74346717 C9.38809007,10.0988443 8.81190993,10.0988443 8.45653283,9.74346717 L7,8.28693434 L5.54346717,9.74346717 C5.18809007,10.0988443 4.61190993,10.0988443 4.25653283,9.74346717 C3.90115572,9.38809007 3.90115572,8.81190993 4.25653283,8.45653283 L5.71306566,7 L4.25653283,5.54346717 C3.90115572,5.18809007 3.90115572,4.61190993 4.25653283,4.25653283 C4.61190993,3.90115572 5.18809007,3.90115572 5.54346717,4.25653283 L7,5.71306566 L8.45653283,4.25653283 C8.81190993,3.90115572 9.38809007,3.90115572 9.74346717,4.25653283 C10.0988443,4.61190993 10.0988443,5.18809007 9.74346717,5.54346717 L8.28693434,7 Z" id="Combined-Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

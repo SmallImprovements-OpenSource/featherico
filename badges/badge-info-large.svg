@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>iconbadge-info-large</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iconbadge-info-large">
+            <circle id="Oval" fill="#C9E5FF" cx="10" cy="10" r="10"></circle>
+            <g id="info" transform="translate(7.000000, 3.000000)" fill="#4495D8" fill-rule="nonzero">
+                <path d="M2,7 C1.44771525,7 1,6.55228475 1,6 C1,5.44771525 1.44771525,5 2,5 L3,5 C3.55228475,5 4,5.44771525 4,6 L4,10 L4.5,10 C5.05228475,10 5.5,10.4477153 5.5,11 C5.5,11.5522847 5.05228475,12 4.5,12 L1.5,12 C0.94771525,12 0.5,11.5522847 0.5,11 C0.5,10.4477153 0.94771525,10 1.5,10 L2,10 L2,7 Z" id="Combined-Shape"></path>
+                <path d="M3,3.25 C2.30964406,3.25 1.75,2.69035594 1.75,2 C1.75,1.30964406 2.30964406,0.75 3,0.75 C3.69035594,0.75 4.25,1.30964406 4.25,2 C4.25,2.69035594 3.69035594,3.25 3,3.25 Z" id="Oval-Copy-2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

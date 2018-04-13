@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>iconbadge-inprogress-small</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iconbadge-inprogress-small">
+            <g id="play-circle">
+                <circle id="Oval" fill="#FCAC53" cx="7" cy="7" r="7"></circle>
+                <path d="M5.8912176,3.7631736 L10.0912176,6.5631736 C10.4029275,6.77098017 10.4029275,7.22901983 10.0912176,7.4368264 L5.8912176,10.2368264 C5.54232637,10.4694206 5.075,10.2193151 5.075,9.8 L5.075,4.2 C5.075,3.78068492 5.54232637,3.53057944 5.8912176,3.7631736 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

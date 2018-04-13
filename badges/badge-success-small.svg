@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>iconbadge-success_completed-small</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iconbadge-success_completed-small">
+            <g id="check-circle">
+                <circle id="Oval" fill="#2ECD72" cx="7" cy="7" r="7"></circle>
+                <path d="M6.3,7.81306566 L9.85653283,4.25653283 C10.2119099,3.90115572 10.7880901,3.90115572 11.1434672,4.25653283 C11.4988443,4.61190993 11.4988443,5.18809007 11.1434672,5.54346717 L6.94346717,9.74346717 C6.58809007,10.0988443 6.01190993,10.0988443 5.65653283,9.74346717 L3.55653283,7.64346717 C3.20115572,7.28809007 3.20115572,6.71190993 3.55653283,6.35653283 C3.91190993,6.00115572 4.48809007,6.00115572 4.84346717,6.35653283 L6.3,7.81306566 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

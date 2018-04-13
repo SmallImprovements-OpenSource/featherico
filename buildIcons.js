@@ -16,7 +16,7 @@ const fs = require('fs');
 const { promisify } = require('util');
 const { transform } = require('babel-core');
 const writeFile = promisify(fs.writeFile);
-const getCustomIcons = require('./customIcons');
+const { getBadgeIcons, getCustomIcons } = require('./customIcons');
 const whitelist = require('./whitelist');
 const aliased = require('./aliased');
 
@@ -33,13 +33,18 @@ getIcons()
     });
 
 async function getIcons() {
-    const customIcons = await getCustomIcons();
-    return compose(
-        map(([name, icon]) => [name, template(name, icon)]),
-        map(([name, icon]) => [pascalCase('icon-' + name), icon]),
-        sortBy(([name]) => name),
-        toPairs
-    )({ ...filterWhitelisted(feather.icons), ...getAliased(), ...customIcons });
+    const [customIcons, badgeIcons] = await Promise.all([getCustomIcons(), getBadgeIcons()]);
+    const makePascalCase = map(([name, icon]) => [pascalCase('icon-' + name), icon]);
+    const mapTemplate = (templateFn) => map(([name, icon]) => [name, templateFn(name, icon)]);
+
+    return compose(sortBy(([name]) => name))([
+        ...compose(mapTemplate(template), makePascalCase, toPairs)({
+            ...filterWhitelisted(feather.icons),
+            ...getAliased(),
+            ...customIcons,
+        }),
+        ...compose(mapTemplate(badgeTemplate), makePascalCase, toPairs)(badgeIcons),
+    ]);
 }
 
 function template(name, icon) {
@@ -52,6 +57,27 @@ export default function ${name}(props) {
             ${icon}
         </svg>
     );
+}
+`;
+}
+
+function badgeTemplate(name, icon) {
+    return `import React from 'react';
+
+export default function ${name}(props) {
+    if (props.small) {
+        return (
+            <svg width="14" height="14" className={props.className}>
+                ${icon.small}
+            </svg>
+        );
+    } else {
+        return (
+            <svg width="20" height="20" className={props.className}>
+                ${icon.large}
+            </svg>
+        );
+    }
 }
 `;
 }

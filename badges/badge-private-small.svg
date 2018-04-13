@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>iconbadge-private-small</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iconbadge-private-small">
+            <g id="Group-11">
+                <g id="play-circle" fill="#8A8E91">
+                    <circle id="Oval" cx="7" cy="7" r="7"></circle>
+                </g>
+                <g id="Icons/500-medium/user" transform="translate(2.800000, 2.800000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <g id="user" transform="translate(0.400000, 0.050000)">
+                        <path d="M6.95,7.3 C6.95,7.49329966 6.79329966,7.65 6.6,7.65 L1,7.65 C0.806700338,7.65 0.65,7.49329966 0.65,7.3 L0.65,6.6 C0.65,5.63350169 1.43350169,4.85 2.4,4.85 L5.2,4.85 C6.16649831,4.85 6.95,5.63350169 6.95,6.6 L6.95,7.3 Z" id="Shape"></path>
+                        <path d="M3.8,4.15 C2.83350169,4.15 2.05,3.36649831 2.05,2.4 C2.05,1.43350169 2.83350169,0.65 3.8,0.65 C4.76649831,0.65 5.55,1.43350169 5.55,2.4 C5.55,3.36649831 4.76649831,4.15 3.8,4.15 Z" id="Oval"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

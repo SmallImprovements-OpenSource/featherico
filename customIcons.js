@@ -2,10 +2,12 @@ const { promisify } = require('util');
 const glob = promisify(require('glob'));
 const path = require('path');
 const fs = require('fs');
-const { concat, curry, map, forEach, keys, fromPairs, camelCase, includes, toArray } = require('lodash/fp');
+const { concat, curry, map, forEach, keys, fromPairs, camelCase, includes, toArray, reduce } = require('lodash/fp');
 const cheerio = require('cheerio');
 const SVGO = require('svgo');
-const svgo = new SVGO({ plugins: [{ convertPathData: false }] });
+const svgo = new SVGO({
+    plugins: [{ convertPathData: false }, { removeXMLNS: true }, { inlineStyles: { onlyMatchedOnce: false } }],
+});
 const readFile = promisify(fs.readFile);
 
 const defaultAttrs = {
@@ -52,15 +54,61 @@ const cleanSvg = svg => {
     return svgInner.toString();
 };
 
-module.exports = async function getIcons() {
+const camelCaseNodeAttributes = curry(($, node) => {
+    const { attribs } = node;
+
+    forEach(attr => {
+        if (includes('-', attr)) {
+            $(node)
+                .attr(camelCase(attr), attribs[attr])
+                .removeAttr(attr);
+        }
+    }, keys(attribs));
+});
+
+const camelCaseAttributes = svg => {
+    const $ = cheerio.load(svg, { xmlMode: true });
+    forEach(camelCaseNodeAttributes($), toArray($('*')));
+    return $('svg')
+        .children()
+        .toString();
+};
+
+const reduceBadgeIcons = reduce((acc, [fullName, svg]) => {
+    const [_, name, size] = fullName.match(/(.*)-(.*)/);
+    return { ...acc, [name]: { ...(acc[name] || {}), [size]: svg } };
+}, {});
+
+async function getCustomIcons() {
     const files = await glob('custom/*.svg');
     const icons = await Promise.all(map(mapIcon)(files));
     return fromPairs(icons);
-};
+}
 
-async function mapIcon(iconPath) {
+async function getBadgeIcons() {
+    const files = await glob('badges/*.svg');
+    const icons = await Promise.all(map(mapBadgeIcon)(files));
+    return reduceBadgeIcons(icons);
+}
+
+async function loadIcon(iconPath) {
     const name = path.basename(iconPath, '.svg');
     const svg = await readFile(iconPath, 'utf8');
     const { data: optimized } = await svgo.optimize(svg);
+    return [name, optimized];
+}
+
+async function mapIcon(iconPath) {
+    const [name, optimized] = await loadIcon(iconPath);
     return [name, cleanSvg(optimized)];
 }
+
+async function mapBadgeIcon(iconPath) {
+    const [name, optimized] = await loadIcon(iconPath);
+    return [name, camelCaseAttributes(optimized)];
+}
+
+module.exports = {
+    getCustomIcons,
+    getBadgeIcons,
+};

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>iconbadge-protected-large</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iconbadge-protected-large">
+            <g id="play-circle" fill="#8A8E91">
+                <circle id="Oval" cx="10" cy="10" r="10"></circle>
+            </g>
+            <g id="Group-39-Copy-2" transform="translate(5.000000, 4.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                <g id="lock-2">
+                    <path d="M1.75,5 L1.75,3.5 C1.75,1.70507456 3.20507456,0.25 5,0.25 C6.79492544,0.25 8.25,1.70507456 8.25,3.5 L8.25,5 L8.5,5 C9.05228475,5 9.5,5.44771525 9.5,6 L9.5,10.5 C9.5,11.0522847 9.05228475,11.5 8.5,11.5 L1.5,11.5 C0.94771525,11.5 0.5,11.0522847 0.5,10.5 L0.5,6 C0.5,5.44771525 0.94771525,5 1.5,5 L1.75,5 Z M3.25,5 L6.75,5 L6.75,3.5 C6.75,2.53350169 5.96649831,1.75 5,1.75 C4.03350169,1.75 3.25,2.53350169 3.25,3.5 L3.25,5 Z" id="Combined-Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

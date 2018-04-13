@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>iconbadge-protected-small</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iconbadge-protected-small">
+            <g id="Group-11">
+                <g id="play-circle" fill="#8A8E91">
+                    <circle id="Oval" cx="7" cy="7" r="7"></circle>
+                </g>
+                <g id="Group-39-Copy-2" transform="translate(3.200000, 2.500000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <g id="lock-2" transform="translate(-0.000000, 0.000000)">
+                        <path d="M1.525,3.8 L1.525,2.75 C1.525,1.49355219 2.54355219,0.475 3.8,0.475 C5.05644781,0.475 6.075,1.49355219 6.075,2.75 L6.075,3.8 L6.25,3.8 C6.63659932,3.8 6.95,4.11340068 6.95,4.5 L6.95,7.65 C6.95,8.03659932 6.63659932,8.35 6.25,8.35 L1.35,8.35 C0.963400675,8.35 0.65,8.03659932 0.65,7.65 L0.65,4.5 C0.65,4.11340068 0.963400675,3.8 1.35,3.8 L1.525,3.8 Z M2.575,3.8 L5.025,3.8 L5.025,2.75 C5.025,2.07345118 4.47654882,1.525 3.8,1.525 C3.12345118,1.525 2.575,2.07345118 2.575,2.75 L2.575,3.8 Z" id="Combined-Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
