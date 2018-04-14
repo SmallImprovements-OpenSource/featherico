@@ -35,7 +35,7 @@ getIcons()
 async function getIcons() {
     const [customIcons, badgeIcons] = await Promise.all([getCustomIcons(), getBadgeIcons()]);
     const makePascalCase = map(([name, icon]) => [pascalCase('icon-' + name), icon]);
-    const mapTemplate = (templateFn) => map(([name, icon]) => [name, templateFn(name, icon)]);
+    const mapTemplate = templateFn => map(([name, icon]) => [name, templateFn(name, icon)]);
 
     return compose(sortBy(([name]) => name))([
         ...compose(mapTemplate(template), makePascalCase, toPairs)({
@@ -53,7 +53,7 @@ import style from '../style';
 
 export default function ${name}(props) {
     return (
-        <svg style={props.customStyle || style} className={props.className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" preserveAspectRatio="xMaxYMid slice">
+        <svg style={props.customStyle || style} className={props.className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" preserveAspectRatio="xMaxYMid slice" data-featherico>
             ${icon}
         </svg>
     );
