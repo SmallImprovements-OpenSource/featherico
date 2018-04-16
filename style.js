@@ -1,6 +1,4 @@
 module.exports = {
-    display: 'inline-block',
-    position: 'relative',
     verticalAlign: 'middle',
     overflow: 'visible',
     marginTop: 'calc(var(--fi-size, 1.1em) / -5)',
