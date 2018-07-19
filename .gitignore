@@ -1,5 +1,6 @@
 node_modules
 dist
 dist-es5
+typings
 example
 .DS_Store
