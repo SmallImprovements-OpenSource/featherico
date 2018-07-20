@@ -3,6 +3,7 @@
     "version": "0.0.0-development",
     "main": "dist-es5/index.js",
     "module": "dist/index.js",
+    "typings": "typings/index.d.ts",
     "description": "Icon set for Small Improvements. Based on feather, exported as React components.",
     "keywords": [
         "icons",
@@ -14,7 +15,7 @@
     "license": "MIT",
     "repository": "SmallImprovements-OpenSource/featherico",
     "scripts": {
-        "build-icons": "rimraf dist dist-es5 && mkdirp dist dist-es5 && node buildIcons",
+        "build-icons": "rimraf dist dist-es5 typings && mkdirp dist dist-es5 typings && node buildIcons",
         "build-example": "rimraf example && mkdirp example && babel-node --presets react,env buildExample",
         "semantic-release": "semantic-release"
     },

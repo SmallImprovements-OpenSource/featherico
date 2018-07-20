@@ -24,6 +24,7 @@ const pascalCase = compose(upperFirst, camelCase);
 const filterWhitelisted = compose(fromPairs, filter(([name]) => includes(name, whitelist)), toPairs);
 const outputPath = path.resolve(__dirname, 'dist');
 const outputPathEs5 = path.resolve(__dirname, 'dist-es5');
+const outputPathTypings = path.resolve(__dirname, 'typings');
 
 getIcons()
     .then(write)
@@ -91,7 +92,7 @@ function getAliased() {
 }
 
 function write(icons) {
-    return Promise.all([writeIndex(icons), ...map(writeIcon, icons)]);
+    return Promise.all([writeTypings(map(i => i[0], icons)), writeIndex(icons), ...map(writeIcon, icons)]);
 }
 
 function writeIndex(icons) {
@@ -113,4 +114,19 @@ function writeIcon([name, icon]) {
         writeFile(path.resolve(outputPath, fileName), code),
         writeFile(path.resolve(outputPathEs5, fileName), codeEs5),
     ]);
+}
+
+function writeTypings(names) {
+    const exports = map(n => `export var ${n}: React.ComponentType<Featherico>`, names).join('\n');
+    const typings = `import * as React from 'react'
+
+export type Featherico = {
+    small?: boolean,
+    className?: string
+}
+
+${exports}
+ `;
+
+    return writeFile(path.resolve(outputPathTypings, 'index.d.ts'), typings);
 }
