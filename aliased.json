@@ -1,6 +1,8 @@
 {
     "award": "module-praise",
     "bar-chart-2": "bar-chart",
+    "maximize-2": "maximize",
+    "minimize-2": "minimize",
     "rotate-ccw": "undo",
     "share-2": "share",
     "slash": "ban",
