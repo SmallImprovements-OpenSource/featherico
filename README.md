@@ -11,5 +11,5 @@ npm install featherico
 ```js
 import { IconModulePraise } from 'featherico';
 
-// <IconModulePraise />
+<IconModulePraise />
 ```
