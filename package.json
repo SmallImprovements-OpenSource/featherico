@@ -31,7 +31,7 @@
         "babel-preset-env": "^1.6.1",
         "babel-preset-react": "^6.24.1",
         "cheerio": "^1.0.0-rc.2",
-        "feather-icons": "^3.3.0",
+        "feather-icons": "^4.24.1",
         "glob": "^7.1.2",
         "lodash": "^4.17.4",
         "mkdirp": "^0.5.1",
