@@ -33,7 +33,7 @@
         "axios": "0.18.1",
         "cheerio": "1.0.0-rc.2",
         "feather-icons": "3.3.0",
-        "glob": "7.1.2",
+        "glob": "7.1.6",
         "lodash": "4.17.13",
         "mkdirp": "0.5.1",
         "react": "16.12.0",
