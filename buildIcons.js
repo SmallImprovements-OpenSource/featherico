@@ -21,7 +21,11 @@ const whitelist = require('./whitelist');
 const aliased = require('./aliased');
 
 const pascalCase = compose(upperFirst, camelCase);
-const filterWhitelisted = compose(fromPairs, filter(([name]) => includes(name, whitelist)), toPairs);
+const filterWhitelisted = compose(
+    fromPairs,
+    filter(([name]) => includes(name, whitelist)),
+    toPairs
+);
 const outputPath = path.resolve(__dirname, 'dist');
 const outputPathEs5 = path.resolve(__dirname, 'dist-es5');
 const outputPathTypings = path.resolve(__dirname, 'typings');
@@ -39,7 +43,11 @@ async function getIcons() {
     const mapTemplate = templateFn => map(([name, icon]) => [name, templateFn(name, icon)]);
 
     return compose(sortBy(([name]) => name))([
-        ...compose(mapTemplate(template), makePascalCase, toPairs)({
+        ...compose(
+            mapTemplate(template),
+            makePascalCase,
+            toPairs
+        )({
             ...filterWhitelisted(feather.icons),
             ...getAliased(),
             ...customIcons,
@@ -86,9 +94,11 @@ export default function ${name}(props) {
 }
 
 function getAliased() {
-    return compose(fromPairs, map(([originalName, newName]) => [newName, feather.icons[originalName]]), toPairs)(
-        aliased
-    );
+    return compose(
+        fromPairs,
+        map(([originalName, newName]) => [newName, feather.icons[originalName]]),
+        toPairs
+    )(aliased);
 }
 
 function write(icons) {
