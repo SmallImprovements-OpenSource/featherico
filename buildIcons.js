@@ -14,7 +14,7 @@ const {
 const path = require('path');
 const fs = require('fs');
 const { promisify } = require('util');
-const { transform } = require('babel-core');
+const { transform } = require('@babel/core');
 const writeFile = promisify(fs.writeFile);
 const { getBadgeIcons, getCustomIcons } = require('./customIcons');
 const whitelist = require('./whitelist');
@@ -108,8 +108,10 @@ function write(icons) {
 function writeIndex(icons) {
     const fileName = 'index.js';
     const imports = map(([name]) => `export ${name} from './${name}';`)(icons);
-    const { code } = transform([...imports, '\n'].join('\n'), { plugins: ['transform-export-extensions'] });
-    const { code: codeEs5 } = transform(code, { plugins: ['transform-es2015-modules-commonjs'] });
+    const { code } = transform([...imports, '\n'].join('\n'), {
+        plugins: ['@babel/plugin-proposal-export-default-from'],
+    });
+    const { code: codeEs5 } = transform(code, { plugins: ['@babel/plugin-transform-modules-commonjs'] });
     return Promise.all([
         writeFile(path.resolve(outputPath, fileName), code),
         writeFile(path.resolve(outputPathEs5, fileName), codeEs5),
@@ -118,8 +120,8 @@ function writeIndex(icons) {
 
 function writeIcon([name, icon]) {
     const fileName = name + '.js';
-    const { code } = transform(icon, { presets: ['react'] });
-    const { code: codeEs5 } = transform(code, { plugins: ['transform-es2015-modules-commonjs'] });
+    const { code } = transform(icon, { presets: ['@babel/preset-react'] });
+    const { code: codeEs5 } = transform(code, { plugins: ['@babel/plugin-transform-modules-commonjs'] });
     return Promise.all([
         writeFile(path.resolve(outputPath, fileName), code),
         writeFile(path.resolve(outputPathEs5, fileName), codeEs5),
