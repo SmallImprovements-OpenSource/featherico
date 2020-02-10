@@ -34,7 +34,7 @@
         "cheerio": "1.0.0-rc.2",
         "feather-icons": "3.3.0",
         "glob": "7.1.2",
-        "lodash": "4.17.4",
+        "lodash": "4.17.13",
         "mkdirp": "0.5.1",
         "react": "16.2.0",
         "react-dom": "16.2.0",
