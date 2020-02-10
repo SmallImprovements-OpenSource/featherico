@@ -60,13 +60,13 @@ function template(name, icon) {
     return `import React from 'react';
 import style from '../style';
 
-export default function ${name}(props) {
+export default React.memo(function ${name}(props) {
     return (
         <svg style={props.customStyle || style} className={props.className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" preserveAspectRatio="xMaxYMid slice" focusable="false" data-featherico>
             ${icon}
         </svg>
     );
-}
+});
 `;
 }
 
@@ -75,7 +75,7 @@ function badgeTemplate(name, icon) {
 
 var style = { verticalAlign: 'middle' };
 
-export default function ${name}(props) {
+export default React.memo(function ${name}(props) {
     if (props.small) {
         return (
             <svg width="14" height="14" className={props.className} style={style}>
@@ -89,7 +89,7 @@ export default function ${name}(props) {
             </svg>
         );
     }
-}
+});
 `;
 }
 
