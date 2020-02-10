@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 9
+  - 12
 script:
   - npm run build-icons
   - npm run build-example
