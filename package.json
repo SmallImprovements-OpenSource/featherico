@@ -16,20 +16,21 @@
     "repository": "SmallImprovements-OpenSource/featherico",
     "scripts": {
         "build-icons": "rimraf dist dist-es5 typings && mkdirp dist dist-es5 typings && node buildIcons",
-        "build-example": "rimraf example && mkdirp example && babel-node --presets react,env buildExample",
+        "build-example": "rimraf example && mkdirp example && babel-node --presets @babel/preset-react,@babel/preset-env buildExample",
         "semantic-release": "semantic-release"
     },
     "peerDependencies": {
         "react": "^15.0.0 || ^16.0.0"
     },
     "devDependencies": {
+        "@babel/cli": "^7.8.4",
+        "@babel/core": "^7.8.4",
+        "@babel/node": "^7.8.4",
+        "@babel/plugin-proposal-export-default-from": "^7.8.3",
+        "@babel/plugin-transform-modules-commonjs": "^7.8.3",
+        "@babel/preset-env": "^7.8.4",
+        "@babel/preset-react": "^7.8.3",
         "axios": "^0.17.1",
-        "babel-cli": "^6.26.0",
-        "babel-core": "^6.26.0",
-        "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
-        "babel-plugin-transform-export-extensions": "^6.22.0",
-        "babel-preset-env": "^1.6.1",
-        "babel-preset-react": "^6.24.1",
         "cheerio": "^1.0.0-rc.2",
         "feather-icons": "^3.3.0",
         "glob": "^7.1.2",
