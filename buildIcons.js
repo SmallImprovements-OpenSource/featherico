@@ -56,7 +56,7 @@ import style from '../style';
 
 export default React.memo(function ${name}(props) {
     return (
-        <svg style={props.customStyle || style} className={props.className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" preserveAspectRatio="xMaxYMid slice" focusable="false" data-featherico>
+        <svg style={props.customStyle ? (props.customStyle === true ? undefined : props.customStyle) : style} className={props.className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" preserveAspectRatio="xMaxYMid slice" focusable="false" data-featherico>
             ${icon}
         </svg>
     );
@@ -131,7 +131,7 @@ function writeTypings(icons) {
 
 export type Featherico = {
     className?: string,
-    customStyle?: React.CSSProperties
+    customStyle?: React.CSSProperties | true
 }
 
 export type FeathericoBadge = {
