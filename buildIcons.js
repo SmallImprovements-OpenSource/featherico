@@ -1,16 +1,5 @@
 const feather = require('feather-icons');
-const {
-    compose,
-    toPairs,
-    fromPairs,
-    map,
-    forEach,
-    camelCase,
-    upperFirst,
-    filter,
-    includes,
-    sortBy,
-} = require('lodash/fp');
+const { compose, toPairs, fromPairs, map, camelCase, upperFirst, filter, includes, sortBy } = require('lodash/fp');
 const path = require('path');
 const fs = require('fs');
 const { promisify } = require('util');
@@ -52,7 +41,12 @@ async function getIcons() {
             ...getAliased(),
             ...customIcons,
         }),
-        ...compose(mapTemplate(badgeTemplate), makePascalCase, toPairs)(badgeIcons),
+        ...compose(
+            map(([name, icon]) => [name, icon, true]),
+            mapTemplate(badgeTemplate),
+            makePascalCase,
+            toPairs
+        )(badgeIcons),
     ]);
 }
 
@@ -102,7 +96,7 @@ function getAliased() {
 }
 
 function write(icons) {
-    return Promise.all([writeTypings(map(i => i[0], icons)), writeIndex(icons), ...map(writeIcon, icons)]);
+    return Promise.all([writeTypings(icons), writeIndex(icons), ...map(writeIcon, icons)]);
 }
 
 function writeIndex(icons) {
@@ -128,13 +122,21 @@ function writeIcon([name, icon]) {
     ]);
 }
 
-function writeTypings(names) {
-    const exports = map(n => `export var ${n}: React.ComponentType<Featherico>`, names).join('\n');
+function writeTypings(icons) {
+    const exports = map(
+        ([name, icon, badge]) => `export var ${name}: React.ComponentType<${badge ? 'FeathericoBadge' : 'Featherico'}>`,
+        icons
+    ).join('\n');
     const typings = `import * as React from 'react'
 
 export type Featherico = {
+    className?: string,
+    customStyle?: React.CSSProperties
+}
+
+export type FeathericoBadge = {
+    className?: string,
     small?: boolean,
-    className?: string
 }
 
 ${exports}
