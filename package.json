@@ -30,7 +30,7 @@
         "@babel/plugin-transform-modules-commonjs": "7.8.3",
         "@babel/preset-env": "7.8.4",
         "@babel/preset-react": "7.8.3",
-        "axios": "0.18.1",
+        "axios": "0.19.2",
         "cheerio": "1.0.0-rc.2",
         "feather-icons": "3.3.0",
         "glob": "7.1.6",
