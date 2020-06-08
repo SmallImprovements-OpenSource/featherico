@@ -55,7 +55,7 @@ function template(name, icon) {
 import fontStyle from '../style';
 
 export default React.memo(function ${name}(props) {
-    const baseStyle = props.customStyle ? (props.customStyle === true ? undefined : props.customStyle) : fontStyle;
+    var baseStyle = props.customStyle ? (props.customStyle === true ? undefined : props.customStyle) : fontStyle;
 
     return (
         <svg style={{ ...baseStyle, ...props.style }} className={props.className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" preserveAspectRatio="xMaxYMid slice" focusable="false" data-featherico>
@@ -69,10 +69,10 @@ export default React.memo(function ${name}(props) {
 function badgeTemplate(name, icon) {
     return `import React from 'react';
 
-const baseStyle = { verticalAlign: 'middle' };
+var baseStyle = { verticalAlign: 'middle' };
 
 export default React.memo(function ${name}(props) {
-    const style = { ...baseStyle, ...props.style };
+    var style = { ...baseStyle, ...props.style };
     if (props.small) {
         return (
             <svg width="14" height="14" className={props.className} style={style}>
