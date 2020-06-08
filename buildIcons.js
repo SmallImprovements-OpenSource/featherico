@@ -52,11 +52,13 @@ async function getIcons() {
 
 function template(name, icon) {
     return `import React from 'react';
-import style from '../style';
+import fontStyle from '../style';
 
 export default React.memo(function ${name}(props) {
+    const baseStyle = props.customStyle ? (props.customStyle === true ? undefined : props.customStyle) : fontStyle;
+
     return (
-        <svg style={props.customStyle ? (props.customStyle === true ? undefined : props.customStyle) : style} className={props.className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" preserveAspectRatio="xMaxYMid slice" focusable="false" data-featherico>
+        <svg style={{ ...baseStyle, ...props.style }} className={props.className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" preserveAspectRatio="xMaxYMid slice" focusable="false" data-featherico>
             ${icon}
         </svg>
     );
@@ -67,9 +69,10 @@ export default React.memo(function ${name}(props) {
 function badgeTemplate(name, icon) {
     return `import React from 'react';
 
-var style = { verticalAlign: 'middle' };
+const baseStyle = { verticalAlign: 'middle' };
 
 export default React.memo(function ${name}(props) {
+    const style = { ...baseStyle, ...props.style };
     if (props.small) {
         return (
             <svg width="14" height="14" className={props.className} style={style}>
@@ -130,13 +133,15 @@ function writeTypings(icons) {
     const typings = `import * as React from 'react'
 
 export type Featherico = {
-    className?: string,
-    customStyle?: React.CSSProperties | true
+    className?: string;
+    customStyle?: React.CSSProperties | true;
+    style?: React.CSSProperties;
 }
 
 export type FeathericoBadge = {
-    className?: string,
-    small?: boolean,
+    className?: string;
+    small?: boolean;
+    style?: React.CSSProperties;
 }
 
 ${exports}
