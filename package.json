@@ -15,7 +15,7 @@
     "license": "MIT",
     "repository": "SmallImprovements-OpenSource/featherico",
     "scripts": {
-        "build-icons": "rimraf dist dist-es5 typings && mkdirp dist dist-es5 typings && node buildIcons",
+        "build": "rimraf dist dist-es5 typings && mkdirp dist dist-es5 typings && node buildIcons",
         "build-example": "rimraf example && mkdirp example && babel-node --presets @babel/preset-react,@babel/preset-env buildExample",
         "semantic-release": "semantic-release"
     },
