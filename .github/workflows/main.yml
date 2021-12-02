@@ -17,9 +17,9 @@ jobs:
               with:
                   name: build
                   path: |
-                    dist
-                    dist-es5
-                    typings
+                      dist
+                      dist-es5
+                      typings
     build-example:
         runs-on: ubuntu-latest
         needs: build
@@ -27,7 +27,7 @@ jobs:
             - uses: actions/checkout@v2
             - uses: actions/download-artifact@v2
               with:
-                name: build
+                  name: build
             - uses: actions/setup-node@v2
               with:
                   node-version: '16'
@@ -40,4 +40,19 @@ jobs:
               with:
                   name: example
                   path: example
-
+    deploy-example:
+        runs-on: ubuntu-latest
+        needs: build-example
+        steps:
+            - uses: actions/download-artifact@v2
+              with:
+                  name: example
+                  path: example
+            - uses: google-github-actions/auth@v0.4.0
+              with:
+                  credentials_json: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+            - uses: google-github-actions/upload-cloud-storage@v0.4.0
+              with:
+                  path: example/index.html
+                  destination: ${{ secrets.GCP_BUCKET }}/${{ github.sha }}.html
+                  parent: false
