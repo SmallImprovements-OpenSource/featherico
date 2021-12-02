@@ -54,5 +54,22 @@ jobs:
             - uses: google-github-actions/upload-cloud-storage@v0.4.0
               with:
                   path: example/index.html
-                  destination: ${{ secrets.GCP_BUCKET }}/${{ github.sha }}.html
+                  destination: ${{ secrets.GCP_BUCKET }}/${{ github.sha }}
                   parent: false
+    publish-example:
+        runs-on: ubuntu-latest
+        needs: deploy-example
+        steps:
+            - name: Update commit status
+              run: |
+                  curl --request POST \
+                  --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} \
+                  --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+                  --header 'content-type: application/json' \
+                  --data '{
+                    "state": "success",
+                    "target_url": "https://storage.googleapis.com/featherico-examples/${{ github.sha }}/index.html",
+                    "description": "View generated icons",
+                    "context": "Icons"
+                    }' \
+                  --fail
