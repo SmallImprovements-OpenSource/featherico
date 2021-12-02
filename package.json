@@ -15,7 +15,7 @@
     "license": "MIT",
     "repository": "SmallImprovements-OpenSource/featherico",
     "scripts": {
-        "build-icons": "rimraf dist dist-es5 typings && mkdirp dist dist-es5 typings && node buildIcons",
+        "build": "rimraf dist dist-es5 typings && mkdirp dist dist-es5 typings && node buildIcons",
         "build-example": "rimraf example && mkdirp example && babel-node --presets @babel/preset-react,@babel/preset-env buildExample",
         "semantic-release": "semantic-release"
     },
@@ -30,12 +30,12 @@
         "@babel/plugin-transform-modules-commonjs": "7.8.3",
         "@babel/preset-env": "7.8.4",
         "@babel/preset-react": "7.8.3",
-        "axios": "0.19.2",
         "cheerio": "1.0.0-rc.2",
         "feather-icons": "3.3.0",
         "glob": "7.1.6",
         "lodash": "4.17.15",
         "mkdirp": "0.5.1",
+        "prettier": "2.5.0",
         "react": "16.12.0",
         "react-dom": "16.12.0",
         "rimraf": "2.6.2",
