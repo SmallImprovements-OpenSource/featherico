@@ -6,5 +6,6 @@
     "rotate-ccw": "undo",
     "share-2": "share",
     "slash": "ban",
-    "trash-2": "trash"
+    "trash-2": "trash",
+    "zap": "module-automations"
 }
