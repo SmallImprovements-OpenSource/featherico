@@ -4,6 +4,7 @@
     "maximize-2": "maximize",
     "minimize-2": "minimize",
     "rotate-ccw": "undo",
+    "rotate-cw": "redo",
     "share-2": "share",
     "slash": "ban",
     "trash-2": "trash",
