@@ -3,4 +3,5 @@ dist
 dist-es5
 typings
 example
+svg-export
 .DS_Store
