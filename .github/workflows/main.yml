@@ -7,7 +7,7 @@ jobs:
             - uses: actions/checkout@v4
             - uses: actions/setup-node@v4
               with:
-                  node-version: '20'
+                  node-version: '24'
                   cache: npm
             - name: Install dependencies
               run: npm ci
@@ -30,7 +30,7 @@ jobs:
                   name: build
             - uses: actions/setup-node@v4
               with:
-                  node-version: '20'
+                  node-version: '24'
                   cache: npm
             - name: Install dependencies
               run: npm ci
@@ -84,7 +84,7 @@ jobs:
                   name: build
             - uses: actions/setup-node@v4
               with:
-                  node-version: '20'
+                  node-version: '24'
             - name: Release
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
