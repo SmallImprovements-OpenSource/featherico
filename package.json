@@ -19,6 +19,7 @@
         "build-example": "rimraf example && mkdirp example && babel-node --presets @babel/preset-react,@babel/preset-env buildExample",
         "semantic-release": "semantic-release"
     },
+    "sideEffects": false,
     "peerDependencies": {
         "react": ">= 16.6.0 < 19.0.0"
     },
