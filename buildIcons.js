@@ -58,7 +58,7 @@ export default React.memo(function ${name}(props) {
     var baseStyle = props.customStyle ? (props.customStyle === true ? undefined : props.customStyle) : fontStyle;
 
     return (
-        <svg {...props} style={Object.assign({}, baseStyle, props.style)} className={props.className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" preserveAspectRatio="xMaxYMid slice" data-featherico>
+        <svg aria-hidden {...props} style={Object.assign({}, baseStyle, props.style)} className={props.className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" preserveAspectRatio="xMaxYMid slice" data-featherico>
             ${icon}
         </svg>
     );
@@ -75,13 +75,13 @@ export default React.memo(function ${name}(props) {
     var style = Object.assign({}, baseStyle, props.style);
     if (props.small) {
         return (
-            <svg {...props} width="14" height="14" style={style}>
+            <svg aria-hidden {...props} width="14" height="14" style={style}>
                 ${icon.small}
             </svg>
         );
     } else {
         return (
-            <svg {...props} width="20" height="20" style={style}>
+            <svg aria-hidden {...props} width="20" height="20" style={style}>
                 ${icon.large}
             </svg>
         );
