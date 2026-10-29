@@ -54,11 +54,11 @@ function template(name, icon) {
     return `import React from 'react';
 import fontStyle from '../style';
 
-export default React.memo(function ${name}(props) {
-    var baseStyle = props.customStyle ? (props.customStyle === true ? undefined : props.customStyle) : fontStyle;
+export default React.memo(function ${name}({ customStyle, ...props }) {
+    var baseStyle = customStyle ? (customStyle === true ? undefined : customStyle) : fontStyle;
 
     return (
-        <svg aria-hidden {...props} style={Object.assign({}, baseStyle, props.style)} className={props.className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" preserveAspectRatio="xMaxYMid slice" data-featherico>
+        <svg aria-hidden {...props} style={Object.assign({}, baseStyle, props.style)} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" preserveAspectRatio="xMaxYMid slice" data-featherico>
             ${icon}
         </svg>
     );
