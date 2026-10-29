@@ -71,9 +71,9 @@ function badgeTemplate(name, icon) {
 
 var baseStyle = { verticalAlign: 'middle' };
 
-export default React.memo(function ${name}(props) {
+export default React.memo(function ${name}({ small, ...props }) {
     var style = Object.assign({}, baseStyle, props.style);
-    if (props.small) {
+    if (small) {
         return (
             <svg aria-hidden {...props} width="14" height="14" style={style}>
                 ${icon.small}
